@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -26,11 +26,6 @@
     <link
       rel="stylesheet"
       href="../../assets/vendors/perfect-scrollbar/css/perfect-scrollbar.min.css"
-    />
-
-    <link 
-      rel="stylesheet" 
-      href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css"
     />
 
     <!-- page plugins css -->
@@ -88,47 +83,17 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Tipos de componentes-->
-              <div class="row">
-                <div class="col">
-                  <div class="card">
-                    <div class="card-block">
-                      <p class="card-info">
-                        <i class="icon ti-mouse-alt"></i
-                        ><label
-                          >Haz clic en las imagenes para saber más de cada tipo
-                          de componente.</label
-                        >
-                      </p>
-                      
-                      <div class="mrg-top-20">
-                        <div class="row">
-                          <div
-                            class="col-lg-4 col-md-6 col-sm-12"
-                            onclick="showModal(1)"
-                          >
-                            <div class="card card-hover">
-                              <div
-                                class="overlay-dark bg"
-                                style="
-                                  background-image: url('../../assets/images/course/modulo2/tema2/shutterstock_1088653958.png');
-                                "
-                              >
-                                <div class="card-block">
-                                  <div class="mrg-top-130">
-                                    <h2>Dispositivo <br />entrada</h2>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+            
+              <div class="card">
+                <div class="front"><h2>Sobre</h2></div>
+                <div class="back">
+                  <div class="content">
+                    <h3 class="cardTitle">Quem eu sou?</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate blandit, libero nulla bibendum quam.</p>
                   </div>
                 </div>
               </div>
+            </div>
 
               <!--Botones de avance entre páginas-->
               <div class="row mrg-btm-20">
@@ -205,28 +170,12 @@
 
     <!-- endbuild -->
     <script src="../../assets/js/scripts/modulo2/modulo2-5.js"></script>
+    
     <script>
-      function showModal(i) {
-        switch (i) {
-          case 1:
-            $("#inputDev").modal({
-              show: true,
-            });
-            break;
-          case 2:
-            $("#outputDev").modal({
-              show: true,
-            });
-            break;
-          case 3:
-            $("#CPU").modal({
-              show: true,
-            });
-            break;
-        }
-      }
+      $('.card').click(function() {
+        $(this).toggleClass('flipped');
+      });
     </script>
-
     <!-- Insert your dependencies here -->
   </body>
 </html>
