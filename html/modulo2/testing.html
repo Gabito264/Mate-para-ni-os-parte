@@ -43,6 +43,12 @@
       .card-hover:hover {
         cursor: pointer;
       }
+
+      .clicked { 
+        background-color: red;
+        border: 1px dashed white;
+      }
+
     </style>
   </head>
 
@@ -84,16 +90,35 @@
                 </div>
               </div>
             
-              <div class="card">
-                <div class="front"><h2>Sobre</h2></div>
-                <div class="back">
-                  <div class="content">
-                    <h3 class="cardTitle">Quem eu sou?</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate blandit, libero nulla bibendum quam.</p>
+              <div class="card" id="card">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm mr-sm-1 p-1">
+                      <div class="m-auto m-lg-0 ml-lg-5 col-fill" style="height: 250px; width: 250px; border: 1px solid red;">
+                      </div>
+                    </div>
+
+                    <div class="col-sm p-1">
+                      <div class="container-fluid h-100" style="height: 250px; width: 250px;">
+                        <div class="row h-50 col-fill">
+                          <div class="col" style="border: 1px solid red;"></div>
+                          <div class="col col-fill" style="border: 1px solid red;"></div>
+                          <div class="col col-fill" style="border: 1px solid red;"></div>
+                          <div class="col col-fill" style="border: 1px solid red;"></div>
+                          <div class="col col-fill" style="border: 1px solid red;"></div>
+                        </div> 
+                        <div class="row h-50">
+                          <div class="col" style="border: 1px dashed red;"></div>
+                          <div class="col" style="border: 1px dashed red;"></div>
+                          <div class="col" style="border: 1px dashed red;"></div>
+                          <div class="col" style="border: 1px dashed red;"></div>
+                          <div class="col" style="border: 1px dashed red;"></div>
+                        </div> 
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
               <!--Botones de avance entre páginas-->
               <div class="row mrg-btm-20">
@@ -152,6 +177,7 @@
     <!-- build:js assets/js/vendor.js -->
     <!-- plugins js -->
     <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="../../assets/vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="../../assets/vendors/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../../assets/vendors/PACE/pace.min.js"></script>
@@ -170,12 +196,11 @@
 
     <!-- endbuild -->
     <script src="../../assets/js/scripts/modulo2/modulo2-5.js"></script>
-    
+    <!-- Insert your dependencies here -->
     <script>
-      $('.card').click(function() {
-        $(this).toggleClass('flipped');
+      $('.col-fill').hover(function(){
+        $(this).toggleClass('clicked');
       });
     </script>
-    <!-- Insert your dependencies here -->
   </body>
 </html>

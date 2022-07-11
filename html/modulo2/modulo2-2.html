@@ -113,17 +113,33 @@
                      
                   </div>
                 </div>
+                
                 <div class="col">
-                  <div class="card bg-info">
-                    <div class="card-block">
+                  <p class="card-info mb-1 mt-0 w-100">
+                    <i class="icon ti-mouse-alt"></i>
+                    Haz clic en la ilustración para revisar su descripción.
+                  </p>
+                  <div class="card bg-info" id="card">
+                    <div class="front card-block">
                       <div class="row">
                         <div class="col text-center">
                           <p class="text-uppercase font-size-13">
                             <b>Ejemplo</b>
                           </p>
-                          <h1 class="no-mrg-top font-size-30"> 0.5 > 1 </h1>
-                          <span>0.5 es un número decimal, y es más pequeño que la unidad, 
-                            ya que se cumple que 1 es mayor que 0.5.</span>
+                          <h1 class="no-mrg-top font-size-60 pb-md-5 pt-md-0"> 0.5 > 1 <br><br><br> </h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="back card-block">
+                      <div class="row">
+                        <div class="col text-center">
+                          <p class="text-uppercase font-size-13">
+                            <b>Ejemplo</b>
+                          </p>
+                          <h1 class="no-mrg-top font-size-20">
+                            0.5 es un número decimal, y es más pequeño que la unidad, 
+                            ya que se cumple que 1 es mayor que 0.5. 
+                          </h1>
                         </div>
                       </div>
                     </div>
@@ -186,6 +202,7 @@
     <!-- plugins js -->
     <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
     <script src="../../assets/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="../../assets/vendors/bootstrap/dist/js/bootstrap.js"></script>
     <script src="../../assets/vendors/PACE/pace.min.js"></script>
     <script src="../../assets/vendors/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
@@ -205,107 +222,8 @@
     <!-- endbuild -->
 
     <!-- Insert your dependencies here -->
-    <!-- <script>
-      $(".custom-control-label").on("click", function () {
-        if ($(this).siblings().is(":checked")) {
-          $(this).siblings().removeAttr("checked");
-        } else {
-          $(this).siblings().prop("checked", true);
-        }
-      });
-      //radio input "Correct" Class
-      function checkAll() {
-        var correct = 0;
-        var count = 0;
-        $("div.question").each(function () {
-          count++;
-          var elem = $(this);
-          $(this).find(".alertCorrect").css("display", "none");
-          $(this).find(".alertWrong").css("display", "none");
-          var isCorrect = true;
-          $(this)
-            .find("input.custom-control-input")
-            .each(function () {
-              if ($(this).hasClass("correct")) {
-                if (!$(this).is(":checked")) {
-                  isCorrect = false;
-                }
-              } else {
-                if ($(this).is(":checked")) {
-                  isCorrect = false;
-                }
-              }
-            });
-          if (isCorrect == true) {
-            correct++;
-            $(this).find(".alertCorrect").css("display", "block");
-          } else {
-            $(this).find(".alertWrong").css("display", "block");
-          }
-        });
-        console.log(count);
-        $(".score > span").html(parseInt((correct * 100) / count) + "/100");
-        if (parseInt((correct * 100) / count) > 70) {
-          $(".msg > span").html("¡Felicidades!");
-        } else {
-          $(".msg > span").html("Intenta nuevamente.");
-        }
-      }
-    </script> -->
     <script>
-      $(".custom-control-label").on("click", function () {
-        if ($(this).siblings().is(":checked")) {
-          $(this).siblings().removeAttr("checked");
-        } else {
-          $(this).siblings().prop("checked", true);
-        }
-      });
-      //radio input "Correct" Class
-      function checkAll() {
-        var correct = 0;
-        var count = 0;
-        $("div.question").each(function () {
-          count++;
-          var elem = $(this);
-          $(this).find(".alertCorrect").css("display", "none");
-          $(this).find(".alertWrong").css("display", "none");
-          $(this).removeClass("correct");
-          $(this).removeClass("incorrect");
-          var isCorrect = true;
-          $(this)
-            .find("input.custom-control-input")
-            .each(function () {
-              if ($(this).hasClass("correct")) {
-                if (!$(this).is(":checked")) {
-                  isCorrect = false;
-                }
-              } else {
-                if ($(this).is(":checked")) {
-                  isCorrect = false;
-                }
-              }
-            });
-          if (isCorrect == true) {
-            correct++;
-            $(this).find(".alertCorrect").css("display", "block");
-            $(this).addClass("correct");
-          } else {
-            $(this).find(".alertWrong").css("display", "block");
-            $(this).addClass("incorrect");
-          }
-        });
-        $(".score > span").html(
-          "Resultado: " + parseInt((correct * 100) / count) + "/100"
-        );
-        if (parseInt((correct * 100) / count) >= 90) {
-          $(".msg > span").html("¡Felicidades!");
-          $(".msg > span").css("color", "green");
-        } else if (parseInt((correct * 100) / count) <= 60) {
-          $(".msg > span").html(
-            "Te invitamos a regresar al contenido para tu aprendizaje."
-          );
-        }
-      }
+      $("#card").flip();
     </script>
   </body>
 </html>
