@@ -42,6 +42,30 @@
   </head>
 
   <body class="header-info side-nav-dark">
+    <style>
+      button.number { 
+        background-color: transparent;
+	      border: none;
+	      padding: 0;
+        color: black;
+	      cursor: pointer;
+	      outline: inherit;
+        width: 100%;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      button.number:hover { 
+        background-color: transparent;
+        color: #800000;
+        padding: 0;
+      }
+
+      button.number:active { 
+        background-color: transparent !important;
+        color: #800000 !important; 
+      }
+    </style>
     <div class="app">
       <div class="layout">
         <!-- Side Nav START -->
@@ -96,16 +120,16 @@
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col">
+                              <div class="col-md-3">
                                 <button class="btn btn-default w-75" onclick="lecturaDecimal(0)">Opción 1</button>
                               </div>
-                              <div class="col">
+                              <div class="col-md-3">
                                 <button class="btn btn-default w-75" onclick="lecturaDecimal(1)">Opción 2</button>
                               </div>
-                              <div class="col">
-                                <button class="btn btn-default w-75" onclick="lecturaDecimal(2)">Opción 3</button>
+                              <div class="col-md-3">
+                                <button class="btn btn-default w-75-lg" onclick="lecturaDecimal(2)">Opción 3</button>
                               </div>
-                              <div class="col">
+                              <div class="col-md-3">
                                 <button class="btn btn-default w-75" onclick="lecturaDecimal(3)">Opción 4</button>
                               </div>
                             </div>
@@ -119,10 +143,53 @@
               </div>
 
               <div class="row">
+                <!-- Número decimal interactivo -->
                 <div class="col">
                   <div class="card">
+                    <div class="card-horizon">
+                      <div class="row">
+                        <div class="col">
+                          <!-- Número decimal -->
+                          <div class="d-flex flex-row w-25">
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Centenas">
+                              8
+                            </button>
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Decenas">
+                              9
+                            </button>
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Unidades">
+                              1
+                            </button>
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="">
+                              .
+                            </button>
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Décima">
+                              2
+                            </button>
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Centésima">
+                              8
+                            </button>
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Milésima">
+                              4
+                            </button>
+                          </div>
+                          <!-- Número decimal -->
+                        </div>
+                        <div class="col">
+                          <div class="card-block">
+                            <h1 class="card-title">Valor posicional</h1>
+                            <p>
+                              A la <b>izquierda del punto</b> encontramos la parte entera, que puede constar de derecha a izquierda de la coma de: unidad, decena y centena. 
+                              <br>
+                              A la <b>derecha del punto</b> encontramos la parte decimal, que puede constar de izquierda a derecha de: décima, centésima y milésima.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <!-- Número decimal interactivo -->
               </div>
             </div>
           </div>
