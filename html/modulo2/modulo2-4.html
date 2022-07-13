@@ -50,7 +50,6 @@
         color: black;
 	      cursor: pointer;
 	      outline: inherit;
-        width: 100%;
         font-size: 40px;
         font-weight: bold;
       }
@@ -94,7 +93,7 @@
                             class="background-holder has-content"
                             style="
                               background-image: url('../../assets/images/course/modulo2/tema1/ejemploDecimal.png');
-                              object-fit: cover;
+                              object-fit: scale-down;
                             "
                           ></div>
                         </div>
@@ -148,28 +147,32 @@
                   <div class="card">
                     <div class="card-horizon">
                       <div class="row">
-                        <div class="col">
+                        <div class="col text-center m-auto">
+                          <p class="card-info mb-1 mt-0">
+                            <i class="icon ti-mouse-alt"></i>
+                            Haz clic en los números para revisar su descripción.
+                          </p>
                           <!-- Número decimal -->
-                          <div class="d-flex flex-row w-25">
-                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Centenas">
+                          <div class="d-flex inline-block flex-row">
+                            <button type="button" class="btn btn-secondary number p-0" data-toggle="tooltip" data-placement="bottom" title="Centenas">
                               8
                             </button>
-                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Decenas">
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="bottom" title="Decenas">
                               9
                             </button>
-                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Unidades">
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="bottom" title="Unidades">
                               1
                             </button>
-                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="">
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="bottom" title="">
                               .
                             </button>
-                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Décima">
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="bottom" title="Décima">
                               2
                             </button>
-                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Centésima">
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="bottom" title="Centésima">
                               8
                             </button>
-                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="top" title="Milésima">
+                            <button type="button" class="btn btn-secondary number" data-toggle="tooltip" data-placement="bottom" title="Milésima">
                               4
                             </button>
                           </div>
